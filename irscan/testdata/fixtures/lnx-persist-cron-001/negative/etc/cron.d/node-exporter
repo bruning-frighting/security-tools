@@ -1,0 +1,3 @@
+# Monitoring agent: downloads metrics to a temp file. Writes to /tmp but does not
+# EXECUTE from it, so the transient-directory criterion must not fire.
+*/5 * * * * nobody curl -s -o /tmp/node-metrics.json http://localhost:9100/metrics

@@ -1,0 +1,55 @@
+irscan — MITRE ATT&CK Host Artifact & Technique Scanner
+=======================================================
+
+Bundled third-party data
+------------------------
+
+MITRE ATT&CK® Enterprise, version 20.0 (STIX 2.1)
+
+    © 2026 The MITRE Corporation. This work is reproduced and distributed with the
+    permission of The MITRE Corporation.
+
+    Source     https://github.com/mitre-attack/attack-stix-data
+    File       enterprise-attack/enterprise-attack-20.0.json
+    SHA-256    81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352
+    Retrieved  2026-10-14T03:19:23Z
+    Terms      https://github.com/mitre-attack/attack-stix-data/blob/master/LICENSE.txt
+
+    MITRE grants a non-exclusive, royalty-free license to use ATT&CK® for research,
+    development, and commercial purposes. The attribution statement above is reproduced
+    as required by those terms. ATT&CK® is a registered trademark of The MITRE
+    Corporation. irscan is not affiliated with, nor endorsed by, The MITRE Corporation.
+
+    MITRE's own disclaimer is material to how this tool's output must be read, and is
+    reproduced here because it directly limits what coverage numbers can mean:
+
+        ATT&CK does not enumerate all possible adversarial techniques. "Using the
+        information contained within ATT&CK to address or cover full categories of
+        techniques will not guarantee full defensive coverage" — there may be
+        undisclosed variations.
+
+    All ATT&CK materials are provided "AS IS", without warranty of any kind, express or
+    implied, including warranties of non-infringement or fitness for a particular purpose.
+
+    irscan transforms this data (resolving sub-technique, tactic, platform and revocation
+    relationships, and adding its own testability classification) but does not modify the
+    upstream objects. The transformation is performed by build/registry_builder/ and is
+    reproducible from the hash above.
+
+
+Build toolchains
+----------------
+
+Go 1.27.2 — BSD-3-Clause — https://go.dev/dl/
+    linux/amd64   ecbadb99091a3f46e31f5f934b068b1864eafa7995211b39eaddf76996045fe5
+    windows/amd64 1314008898bd40df77af4b014f777f08873dbdfbcd3d92308728ee03304fe04f
+
+CPython 3.14.5 — PSF License — build-time registry builder and offline post-processing only.
+
+
+Runtime dependencies
+--------------------
+
+None. The scanner is a single statically linked binary built against the Go standard
+library only. It performs no network access at scan time. See build/sources.lock.json,
+which records an intentionally empty go_modules list.

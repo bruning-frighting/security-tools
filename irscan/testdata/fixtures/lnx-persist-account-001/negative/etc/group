@@ -1,0 +1,8 @@
+root:x:0:
+daemon:x:1:
+sudo:x:27:alice
+www-data:x:33:
+adm:x:4:
+postgres:x:105:
+alice:x:1000:
+bob:x:1001:

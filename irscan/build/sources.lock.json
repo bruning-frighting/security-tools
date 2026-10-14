@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "purpose": "Pins every external dataset the build consumes. The scan-time binary never downloads anything (PLAN.md section 1), so this file is the sole provenance record for the bundled registry.",
+    "discipline": "A hash mismatch is fatal, not a warning. Changing a pin is a deliberate act that must be accompanied by a DECISIONS.md entry."
+  },
+
+  "attack_stix": {
+    "dataset": "MITRE ATT&CK Enterprise (STIX 2.1)",
+    "version": "20.0",
+    "collection_id": "x-mitre-collection--1f5f1533-f617-4ca8-9ab4-6a02367fa019",
+    "collection_modified": "2026-10-13T17:53:10.145Z",
+    "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-20.0.json",
+    "repository": "https://github.com/mitre-attack/attack-stix-data",
+    "index_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/index.json",
+    "sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+    "size_bytes": 55271014,
+    "retrieved_at": "2026-10-14T03:19:23Z",
+    "retrieved_by": "build/fetch_stix.py",
+    "license": {
+      "name": "MITRE ATT&CK Terms of Use",
+      "url": "https://github.com/mitre-attack/attack-stix-data/blob/master/LICENSE.txt",
+      "required_attribution": "© 2026 The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation.",
+      "attribution_reproduced_in": "NOTICE",
+      "retrieved_at": "2026-10-14"
+    },
+    "alternate_pins": {
+      "_note": "Supported fallbacks. The builder is version-agnostic (DECISIONS.md D-005); switching pin requires only editing attack_stix above and re-running fetch_stix.py.",
+      "19.2": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-19.2.json"
+    }
+  },
+
+  "build_toolchains": {
+    "_note": "Recorded for reproducible-build purposes. Not consumed by the registry builder.",
+    "go": {
+      "version": "go1.27.2",
+      "linux_amd64_archive": "go1.27.2.linux-amd64.tar.gz",
+      "linux_amd64_sha256": "ecbadb99091a3f46e31f5f934b068b1864eafa7995211b39eaddf76996045fe5",
+      "windows_amd64_archive": "go1.27.2.windows-amd64.zip",
+      "windows_amd64_sha256": "1314008898bd40df77af4b014f777f08873dbdfbcd3d92308728ee03304fe04f",
+      "source": "https://go.dev/dl/",
+      "license": "BSD-3-Clause",
+      "verified": "both archives downloaded and SHA-256 verified against go.dev release metadata on 2026-10-14"
+    },
+    "python": {
+      "version": "3.14.5",
+      "role": "build-time registry builder and offline report post-processing only",
+      "third_party_packages": []
+    }
+  },
+
+  "runtime_dependencies": {
+    "_note": "Deliberately empty. The Go binary uses the standard library only, so there is no third-party runtime dependency to license or hash.",
+    "go_modules": []
+  }
+}

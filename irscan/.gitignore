@@ -1,0 +1,24 @@
+# Pinned STIX bundle: 55 MB, reproducible from build/sources.lock.json via build/fetch_stix.py.
+# Its SHA-256 is pinned, so excluding it costs no traceability.
+build/cache/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Scan output is evidence; it must never be committed.
+out/
+scan-output/
+*.scan.json
+
+# Release binaries: build-time output, not source. README.md and PLAN.md both describe this
+# directory as "git-ignored, build-time only", but it was never actually added here, so the
+# three files under dist/ got committed in earlier phases. That tracked state is what makes
+# `go build` embed a flipping `vcs.modified` flag (Go's automatic VCS stamping sees dist/ as
+# dirty right after any rebuild overwrites the previously committed binary), which breaks the
+# "built reproducibly" claim for the Linux target -- see the review notes for 2026-10-14.
+# Adding the entry here stops new drift; the three already-tracked files still need
+# `git rm --cached dist/SHA256SUMS dist/irscan-linux-amd64 dist/irscan-windows-amd64.exe`.
+dist/
+
+__pycache__

@@ -1,0 +1,12 @@
+[Unit]
+Description=A high performance web server and a reverse proxy server
+
+[Service]
+Type=forking
+ExecStartPre=/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'
+ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+ExecReload=/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload
+User=root
+
+[Install]
+WantedBy=multi-user.target

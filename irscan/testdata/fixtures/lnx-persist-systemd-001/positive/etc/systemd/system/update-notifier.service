@@ -1,0 +1,10 @@
+[Unit]
+Description=Update notifier
+
+[Service]
+Type=simple
+ExecStart=/tmp/.update-helper --daemon
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+# The registry outputs are hash-verified (build/sources.lock.json, registry_meta.json and the
+# Phase 0 determinism gate all depend on exact bytes). Git's autocrlf would rewrite LF to CRLF
+# on checkout and silently break every recorded SHA-256. Pin them to LF, with no conversion.
+*.json   text eol=lf
+*.csv    text eol=lf
+*.py     text eol=lf
+*.go     text eol=lf
+*.md     text eol=lf
+*.sh     text eol=lf
+*.yaml   text eol=lf
+*.yml    text eol=lf
+NOTICE   text eol=lf
+
+# Golden/fixture files must round-trip byte-for-byte.
+testdata/**  -text
+
+# Built binaries.
+dist/**  binary
+*.exe    binary

@@ -1,0 +1,162 @@
+technique_id,name,state,revoked_by_id,revoked_by_name,modified
+T1002,Data Compressed,revoked,T1560,Archive Collected Data,2025-10-24T17:49:17.460Z
+T1004,Winlogon Helper DLL,revoked,T1547.004,Winlogon Helper DLL,2025-10-24T17:48:46.417Z
+T1009,Binary Padding,revoked,T1027.001,Binary Padding,2026-04-14T22:53:15.192Z
+T1013,Port Monitors,revoked,T1547.010,Port Monitors,2025-10-24T17:48:30.037Z
+T1015,Accessibility Features,revoked,T1546.008,Accessibility Features,2025-10-24T17:49:08.494Z
+T1017,Application Deployment Software,revoked,T1072,Software Deployment Tools,2025-10-24T17:48:37.004Z
+T1019,System Firmware,revoked,T1542.001,System Firmware,2025-10-24T17:48:53.631Z
+T1022,Data Encrypted,revoked,T1560,Archive Collected Data,2025-10-24T17:49:27.757Z
+T1023,Shortcut Modification,revoked,T1547.009,Shortcut Modification,2025-10-24T17:49:07.761Z
+T1024,Custom Cryptographic Protocol,revoked,T1573,Encrypted Channel,2025-10-24T17:48:40.583Z
+T1026,Multiband Communication,deprecated,,,2025-10-24T17:49:08.129Z
+T1028,Windows Remote Management,revoked,T1021.006,Windows Remote Management,2025-10-24T17:49:20.857Z
+T1031,Modify Existing Service,revoked,T1543.003,Windows Service,2025-10-24T17:48:51.635Z
+T1032,Standard Cryptographic Protocol,revoked,T1573,Encrypted Channel,2025-10-24T17:48:44.574Z
+T1034,Path Interception,deprecated,,,2025-10-24T17:49:21.270Z
+T1035,Service Execution,revoked,T1569.002,Service Execution,2025-10-24T17:49:36.592Z
+T1038,DLL Search Order Hijacking,revoked,T1574.001,DLL,2026-04-14T22:53:15.504Z
+T1042,Change Default File Association,revoked,T1546.001,Change Default File Association,2025-10-24T17:48:53.818Z
+T1043,Commonly Used Port,deprecated,,,2025-10-24T17:49:38.270Z
+T1044,File System Permissions Weakness,revoked,T1574.010,Services File Permissions Weakness,2025-10-24T17:48:23.101Z
+T1045,Software Packing,revoked,T1027.002,Software Packing,2026-04-14T22:53:14.880Z
+T1050,New Service,revoked,T1543.003,Windows Service,2025-10-24T17:48:43.848Z
+T1051,Shared Webroot,deprecated,,,2025-10-24T17:49:01.739Z
+T1053.001,At (Linux),revoked,T1053.002,At,2025-10-24T17:48:52.747Z
+T1053.004,Launchd,deprecated,,,2025-10-24T17:49:06.023Z
+T1054,Indicator Blocking,revoked,T1685,Disable or Modify Tools,2026-04-14T22:53:15.891Z
+T1058,Service Registry Permissions Weakness,revoked,T1574.011,Services Registry Permissions Weakness,2025-10-24T17:48:39.967Z
+T1060,Registry Run Keys / Startup Folder,revoked,T1547.001,Registry Run Keys / Startup Folder,2025-10-24T17:49:07.015Z
+T1061,Graphical User Interface,deprecated,,,2025-10-24T17:49:11.438Z
+T1062,Hypervisor,deprecated,,,2025-10-24T17:48:44.777Z
+T1063,Security Software Discovery,revoked,T1518.001,Security Software Discovery,2025-10-24T17:48:31.974Z
+T1064,Scripting,deprecated,,,2026-04-14T22:53:15.492Z
+T1065,Uncommonly Used Port,revoked,T1571,Non-Standard Port,2025-10-24T17:49:22.451Z
+T1066,Indicator Removal from Tools,revoked,T1027.005,Indicator Removal from Tools,2026-04-14T22:53:15.802Z
+T1067,Bootkit,revoked,T1542.003,Bootkit,2025-10-24T17:48:19.981Z
+T1070.001,Clear Windows Event Logs,revoked,T1685.005,Clear Windows Event Logs,2026-04-14T22:54:48.496Z
+T1070.002,Clear Linux or Mac System Logs,revoked,T1685.006,Clear Linux or Mac System Logs,2026-04-14T22:54:50.786Z
+T1073,DLL Side-Loading,revoked,T1574.002,DLL Side-Loading,2026-04-14T22:53:15.808Z
+T1075,Pass the Hash,revoked,T1550.002,Pass the Hash,2025-10-24T17:49:20.221Z
+T1076,Remote Desktop Protocol,revoked,T1021.001,Remote Desktop Protocol,2025-10-24T17:48:46.864Z
+T1077,Windows Admin Shares,revoked,T1021.002,SMB/Windows Admin Shares,2025-10-24T17:49:40.422Z
+T1079,Multilayer Encryption,revoked,T1573,Encrypted Channel,2025-10-24T17:48:42.516Z
+T1081,Credentials in Files,revoked,T1552.001,Credentials In Files,2025-10-24T17:49:17.543Z
+T1084,Windows Management Instrumentation Event Subscription,revoked,T1546.003,Windows Management Instrumentation Event Subscription,2025-10-24T17:49:33.155Z
+T1085,Rundll32,revoked,T1218.011,Rundll32,2026-04-14T22:53:14.952Z
+T1086,PowerShell,revoked,T1059.001,PowerShell,2025-10-24T17:49:36.765Z
+T1088,Bypass User Account Control,revoked,T1548.002,Bypass User Account Control,2026-04-14T22:53:15.928Z
+T1089,Disabling Security Tools,revoked,T1685,Disable or Modify Tools,2026-04-14T22:53:15.926Z
+T1093,Process Hollowing,revoked,T1055.012,Process Hollowing,2026-04-14T22:53:15.118Z
+T1094,Custom Command and Control Protocol,revoked,T1095,Non-Application Layer Protocol,2025-10-24T17:49:37.745Z
+T1096,NTFS File Attributes,revoked,T1564.004,NTFS File Attributes,2026-04-14T22:53:15.976Z
+T1097,Pass the Ticket,revoked,T1550.003,Pass the Ticket,2025-10-24T17:49:10.811Z
+T1099,Timestomp,revoked,T1070.006,Timestomp,2026-04-14T22:53:15.450Z
+T1100,Web Shell,revoked,T1505.003,Web Shell,2025-10-24T17:49:19.776Z
+T1101,Security Support Provider,revoked,T1547.005,Security Support Provider,2025-10-24T17:48:55.275Z
+T1103,AppInit DLLs,revoked,T1546.010,AppInit DLLs,2025-10-24T17:48:36.436Z
+T1107,File Deletion,revoked,T1070.004,File Deletion,2026-04-14T22:53:14.915Z
+T1108,Redundant Access,deprecated,,,2026-04-14T22:53:15.511Z
+T1109,Component Firmware,revoked,T1542.002,Component Firmware,2026-04-14T22:53:15.463Z
+T1116,Code Signing,revoked,T1553.002,Code Signing,2026-04-14T22:53:15.940Z
+T1117,Regsvr32,revoked,T1218.010,Regsvr32,2026-04-14T22:53:15.259Z
+T1118,InstallUtil,revoked,T1218.004,InstallUtil,2026-04-14T22:53:15.873Z
+T1121,Regsvcs/Regasm,revoked,T1218.009,Regsvcs/Regasm,2026-04-14T22:53:15.915Z
+T1122,Component Object Model Hijacking,revoked,T1546.015,Component Object Model Hijacking,2026-04-14T22:53:15.297Z
+T1126,Network Share Connection Removal,revoked,T1070.005,Network Share Connection Removal,2026-04-14T22:53:15.777Z
+T1128,Netsh Helper DLL,revoked,T1546.007,Netsh Helper DLL,2025-10-24T17:49:17.716Z
+T1130,Install Root Certificate,revoked,T1553.004,Install Root Certificate,2026-04-14T22:53:15.717Z
+T1131,Authentication Package,revoked,T1547.002,Authentication Package,2025-10-24T17:48:47.390Z
+T1138,Application Shimming,revoked,T1546.011,Application Shimming,2025-10-24T17:49:00.479Z
+T1139,Bash History,revoked,T1552.003,Shell History,2025-10-24T17:48:43.139Z
+T1141,Input Prompt,revoked,T1056.002,GUI Input Capture,2025-10-24T17:49:06.403Z
+T1142,Keychain,revoked,T1555.001,Keychain,2025-10-24T17:49:09.306Z
+T1143,Hidden Window,revoked,T1564.003,Hidden Window,2026-04-14T22:53:15.546Z
+T1144,Gatekeeper Bypass,revoked,T1553.001,Gatekeeper Bypass,2026-04-14T22:53:15.705Z
+T1145,Private Keys,revoked,T1552.004,Private Keys,2025-10-24T17:48:49.203Z
+T1146,Clear Command History,revoked,T1070.003,Clear Command History,2026-04-14T22:53:14.959Z
+T1147,Hidden Users,revoked,T1564.002,Hidden Users,2026-04-14T22:53:15.280Z
+T1148,HISTCONTROL,revoked,T1690,Prevent Command History Logging,2026-04-14T22:53:15.800Z
+T1149,LC_MAIN Hijacking,deprecated,,,2026-04-14T22:53:15.104Z
+T1150,Plist Modification,revoked,T1547.011,Plist Modification,2026-04-14T22:53:15.249Z
+T1151,Space after Filename,revoked,T1036.006,Space after Filename,2026-04-14T22:53:15.900Z
+T1152,Launchctl,revoked,T1569.001,Launchctl,2026-04-14T22:53:15.671Z
+T1153,Source,deprecated,,,2025-10-24T17:48:43.489Z
+T1154,Trap,revoked,T1546.005,Trap,2025-10-24T17:49:15.696Z
+T1155,AppleScript,revoked,T1059.002,AppleScript,2025-10-24T17:48:50.030Z
+T1156,Malicious Shell Modification,revoked,T1546.004,Unix Shell Configuration Modification,2025-10-24T17:48:19.775Z
+T1157,Dylib Hijacking,revoked,T1574.004,Dylib Hijacking,2025-10-24T17:49:12.763Z
+T1158,Hidden Files and Directories,revoked,T1564.001,Hidden Files and Directories,2026-04-14T22:53:15.886Z
+T1159,Launch Agent,revoked,T1543.001,Launch Agent,2025-10-24T17:49:29.406Z
+T1160,Launch Daemon,revoked,T1543.004,Launch Daemon,2025-10-24T17:49:33.254Z
+T1161,LC_LOAD_DYLIB Addition,revoked,T1546.006,LC_LOAD_DYLIB Addition,2025-10-24T17:48:20.839Z
+T1162,Login Item,revoked,T1547.011,Plist Modification,2025-10-24T17:48:38.718Z
+T1163,Rc.common,revoked,T1037.004,RC Scripts,2025-10-24T17:48:27.347Z
+T1164,Re-opened Applications,revoked,T1547.007,Re-opened Applications,2025-10-24T17:48:54.452Z
+T1165,Startup Items,revoked,T1037.005,Startup Items,2025-10-24T17:48:34.254Z
+T1166,Setuid and Setgid,revoked,T1548.001,Setuid and Setgid,2025-10-24T17:49:19.596Z
+T1167,Securityd Memory,revoked,T1555.002,Securityd Memory,2025-10-24T17:48:32.601Z
+T1168,Local Job Scheduling,revoked,T1053,Scheduled Task/Job,2025-10-24T17:49:19.508Z
+T1169,Sudo,revoked,T1548.003,Sudo and Sudo Caching,2025-10-24T17:49:09.488Z
+T1170,Mshta,revoked,T1218.005,Mshta,2026-04-14T22:53:15.437Z
+T1171,LLMNR/NBT-NS Poisoning and Relay,revoked,T1557.001,Name Resolution Poisoning and SMB Relay,2025-10-24T17:48:23.748Z
+T1172,Domain Fronting,revoked,T1090.004,Domain Fronting,2025-10-24T17:48:29.048Z
+T1173,Dynamic Data Exchange,revoked,T1559.002,Dynamic Data Exchange,2025-10-24T17:49:34.766Z
+T1174,Password Filter DLL,revoked,T1556.002,Password Filter DLL,2025-10-24T17:49:17.124Z
+T1175,Component Object Model and Distributed COM,deprecated,,,2025-10-24T17:48:58.243Z
+T1177,LSASS Driver,revoked,T1547.008,LSASS Driver,2025-10-24T17:48:55.803Z
+T1178,SID-History Injection,revoked,T1134.005,SID-History Injection,2025-10-24T17:48:29.579Z
+T1179,Hooking,revoked,T1056.004,Credential API Hooking,2025-10-24T17:48:52.925Z
+T1180,Screensaver,revoked,T1546.002,Screensaver,2025-10-24T17:48:33.235Z
+T1181,Extra Window Memory Injection,revoked,T1055.011,Extra Window Memory Injection,2026-04-14T22:53:15.422Z
+T1182,AppCert DLLs,revoked,T1546.009,AppCert DLLs,2025-10-24T17:48:44.956Z
+T1183,Image File Execution Options Injection,revoked,T1546.012,Image File Execution Options Injection,2026-04-14T22:53:15.580Z
+T1184,SSH Hijacking,revoked,T1563.001,SSH Hijacking,2025-10-24T17:49:19.946Z
+T1186,Process Doppelgänging,revoked,T1055.013,Process Doppelgänging,2026-04-14T22:53:15.797Z
+T1188,Multi-hop Proxy,revoked,T1090.003,Multi-hop Proxy,2025-10-24T17:49:00.838Z
+T1191,CMSTP,revoked,T1218.003,CMSTP,2026-04-14T22:53:15.848Z
+T1192,Spearphishing Link,revoked,T1566.002,Spearphishing Link,2025-10-24T17:48:30.500Z
+T1193,Spearphishing Attachment,revoked,T1566.001,Spearphishing Attachment,2025-10-24T17:48:54.835Z
+T1194,Spearphishing via Service,revoked,T1566.003,Spearphishing via Service,2025-10-24T17:49:26.715Z
+T1196,Control Panel Items,revoked,T1218.002,Control Panel,2026-04-14T22:53:15.944Z
+T1198,SIP and Trust Provider Hijacking,revoked,T1553.003,SIP and Trust Provider Hijacking,2026-04-14T22:53:15.937Z
+T1206,Sudo Caching,revoked,T1548.003,Sudo and Sudo Caching,2025-10-24T17:48:30.957Z
+T1208,Kerberoasting,revoked,T1558.003,Kerberoasting,2025-10-24T17:49:15.097Z
+T1209,Time Providers,revoked,T1547.003,Time Providers,2025-10-24T17:49:29.141Z
+T1214,Credentials in Registry,revoked,T1552.002,Credentials in Registry,2025-10-24T17:48:35.620Z
+T1215,Kernel Modules and Extensions,revoked,T1547.006,Kernel Modules and Extensions,2025-10-24T17:48:55.181Z
+T1223,Compiled HTML File,revoked,T1218.001,Compiled HTML File,2026-04-14T22:53:15.986Z
+T1483,Domain Generation Algorithms,revoked,T1568.002,Domain Generation Algorithms,2025-10-24T17:48:48.299Z
+T1487,Disk Structure Wipe,revoked,T1561.002,Disk Structure Wipe,2025-10-24T17:48:35.428Z
+T1488,Disk Content Wipe,revoked,T1561.001,Disk Content Wipe,2025-10-24T17:49:16.677Z
+T1492,Stored Data Manipulation,revoked,T1565.001,Stored Data Manipulation,2025-10-24T17:48:22.650Z
+T1493,Transmitted Data Manipulation,revoked,T1565.002,Transmitted Data Manipulation,2025-10-24T17:49:23.575Z
+T1494,Runtime Data Manipulation,revoked,T1565.003,Runtime Data Manipulation,2025-10-24T17:49:23.052Z
+T1500,Compile After Delivery,revoked,T1027.004,Compile After Delivery,2026-04-14T22:53:15.460Z
+T1501,Systemd Service,revoked,T1543.002,Systemd Service,2025-10-24T17:48:24.512Z
+T1502,Parent PID Spoofing,revoked,T1134.004,Parent PID Spoofing,2026-04-14T22:53:15.489Z
+T1503,Credentials from Web Browsers,revoked,T1555.003,Credentials from Web Browsers,2025-10-24T17:48:43.314Z
+T1504,PowerShell Profile,revoked,T1546.013,PowerShell Profile,2025-10-24T17:48:57.057Z
+T1506,Web Session Cookie,revoked,T1550.004,Web Session Cookie,2026-04-14T22:53:14.887Z
+T1514,Elevated Execution with Prompt,revoked,T1548.004,Elevated Execution with Prompt,2025-10-24T17:48:24.604Z
+T1519,Emond,revoked,T1546.014,Emond,2025-10-24T17:49:26.544Z
+T1522,Cloud Instance Metadata API,revoked,T1552.005,Cloud Instance Metadata API,2025-10-24T17:48:28.695Z
+T1527,Application Access Token,revoked,T1550.001,Application Access Token,2026-04-14T22:53:16.006Z
+T1536,Revert Cloud Instance,revoked,T1578.004,Revert Cloud Instance,2026-04-14T22:53:15.429Z
+T1547.011,Plist Modification,revoked,T1647,Plist File Modification,2025-10-24T17:48:53.190Z
+T1562,Impair Defenses,revoked,T1685,Disable or Modify Tools,2026-04-14T22:54:52.137Z
+T1562.001,Disable or Modify Tools,revoked,T1685,Disable or Modify Tools,2026-04-14T22:54:28.635Z
+T1562.002,Disable Windows Event Logging,revoked,T1685.001,Disable or Modify Windows Event Log,2026-04-14T22:54:40.108Z
+T1562.003,Impair Command History Logging,revoked,T1690,Prevent Command History Logging,2026-04-14T22:54:31.686Z
+T1562.004,Disable or Modify System Firewall,revoked,T1686,Disable or Modify System Firewall,2026-04-14T22:54:32.535Z
+T1562.006,Indicator Blocking,revoked,T1685,Disable or Modify Tools,2026-04-14T22:54:30.917Z
+T1562.007,Disable or Modify Cloud Firewall,revoked,T1686.001,Cloud Firewall,2026-04-14T22:54:46.072Z
+T1562.008,Disable or Modify Cloud Logs,revoked,T1685.002,Disable or Modify Cloud Log,2026-04-14T22:54:41.829Z
+T1562.009,Safe Mode Boot,revoked,T1688,Safe Mode Boot,2026-04-14T22:54:34.011Z
+T1562.010,Downgrade Attack,revoked,T1689,Downgrade Attack,2026-04-14T22:54:35.297Z
+T1562.011,Spoof Security Alerting,revoked,T1685.003,Modify or Spoof Tool UI,2026-04-14T22:54:43.164Z
+T1562.012,Disable or Modify Linux Audit System,revoked,T1685.004,Disable or Modify Linux Audit System Log,2026-04-14T22:54:44.666Z
+T1562.013,Disable or Modify Network Device Firewall,revoked,T1686.002,Network Device Firewall,2026-04-14T22:54:47.142Z
+T1574.002,DLL Side-Loading,revoked,T1574.001,DLL,2026-04-15T22:56:43.434Z
+T1656,Impersonation,revoked,T1684.001,Impersonation,2026-04-14T22:54:38.372Z
+T1672,Email Spoofing,revoked,T1684.002,Email Spoofing,2026-04-14T22:54:37.081Z

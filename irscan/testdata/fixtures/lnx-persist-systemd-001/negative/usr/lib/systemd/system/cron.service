@@ -1,0 +1,9 @@
+[Unit]
+Description=Regular background program processing daemon
+
+[Service]
+ExecStart=/usr/sbin/cron -f -P
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+{
+  "var/log/audit": "/tmp/.nowhere",
+  "var/log/auth.log": "/dev/null"
+}

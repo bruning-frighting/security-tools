@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "purpose": "Per-technique corrections where the deterministic rules in registry_builder/classify.py produce a wrong testability class. Applied after the platform check and before all other rules.",
+    "schema": "technique ID -> { class, reason, reviewed_by, reviewed_on }",
+    "allowed_classes": [
+      "HOST_ARTIFACT",
+      "HOST_TELEMETRY",
+      "MIXED",
+      "MEMORY_ONLY",
+      "NETWORK_ONLY",
+      "OFF_HOST",
+      "NO_HOST_EVIDENCE"
+    ],
+    "discipline": "An override is a documented analyst judgement, not a convenience. Per DECISIONS.md D-006, if overrides exceed ~10% of in-scope techniques the rules are wrong and must be rewritten rather than patched. A class may never be set to a value that reduces honest coverage (e.g. moving a scannable technique to NO_HOST_EVIDENCE to avoid building a check)."
+  },
+  "overrides": {
+    "T1698": {
+      "class": "OFF_HOST",
+      "reason": "ATT&CK v20.0 ships no detection strategy or log source for this technique, so the deterministic rules could not classify it (R10-undetermined). Reviewed judgement: an indirect prompt injection is delivered through content an LLM application consumes, and its evidence is the application's own prompt/response/tool-call records -- an application or SaaS-side log, not durable Windows or Linux host state. A read-only host artifact scan has nothing to read. Listed platforms are SaaS and Windows; its tactic is execution, so it is outside the implementation scope regardless.",
+      "reviewed_by": "irscan build (session 2026-10-14)",
+      "reviewed_on": "2026-10-14"
+    },
+    "T1699": {
+      "class": "OFF_HOST",
+      "reason": "Same basis as T1698: no detection strategy or log source in the pinned bundle, and the evidence of a direct prompt injection is the LLM application's conversation and tool-invocation records rather than host state. Classified OFF_HOST rather than NO_HOST_EVIDENCE because the evidence does exist, just not on the scanned host.",
+      "reviewed_by": "irscan build (session 2026-10-14)",
+      "reviewed_on": "2026-10-14"
+    }
+  }
+}

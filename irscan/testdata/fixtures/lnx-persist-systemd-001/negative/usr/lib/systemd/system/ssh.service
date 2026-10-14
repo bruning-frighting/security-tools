@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenBSD Secure Shell server
+After=network.target auditd.service
+
+[Service]
+EnvironmentFile=-/etc/default/ssh
+ExecStartPre=/usr/sbin/sshd -t
+ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
+ExecReload=/usr/sbin/sshd -t
+Type=notify
+
+[Install]
+WantedBy=multi-user.target

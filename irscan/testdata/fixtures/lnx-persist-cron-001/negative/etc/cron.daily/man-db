@@ -1,0 +1,3 @@
+#!/bin/sh
+test -x /usr/bin/mandb || exit 0
+/usr/bin/mandb --quiet

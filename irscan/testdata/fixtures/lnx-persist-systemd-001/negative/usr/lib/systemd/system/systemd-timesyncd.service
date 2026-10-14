@@ -1,0 +1,7 @@
+[Unit]
+Description=Network Time Synchronization
+
+[Service]
+Type=notify
+ExecStart=/usr/lib/systemd/systemd-timesyncd
+User=systemd-timesync

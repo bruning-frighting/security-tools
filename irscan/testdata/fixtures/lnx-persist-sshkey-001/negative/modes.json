@@ -1,0 +1,4 @@
+{
+  "home/alice/.ssh/authorized_keys": "0o600",
+  "home/bob/.ssh/authorized_keys": "0o600"
+}

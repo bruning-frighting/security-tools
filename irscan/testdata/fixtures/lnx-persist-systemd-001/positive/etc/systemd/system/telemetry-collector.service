@@ -1,0 +1,5 @@
+[Unit]
+Description=Telemetry collector
+
+[Service]
+ExecStart=/usr/local/bin/telemetry-collector

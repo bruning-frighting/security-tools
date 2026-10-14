@@ -1,0 +1,5 @@
+{
+  "home/alice/.aws/credentials": "0o600",
+  "home/alice/.bash_history": "0o600",
+  "home/alice/.ssh/id_rsa": "0o644"
+}

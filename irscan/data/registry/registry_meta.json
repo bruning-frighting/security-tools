@@ -1,0 +1,121 @@
+{
+  "builder": {
+    "note": "Outputs contain no wall-clock timestamp by design, so that two runs on the same input are byte-identical (Phase 0 gate). The only time recorded is the pinned source's retrieved_at, which is an input."
+  },
+  "counts": {
+    "U_active": 706,
+    "U_bundle": 867,
+    "U_host": 511,
+    "U_host_by_baseline_status": {
+      "PLANNED": 508,
+      "UNSUPPORTED": 3
+    },
+    "U_host_by_testability_class": {
+      "HOST_ARTIFACT": 1,
+      "HOST_TELEMETRY": 304,
+      "MIXED": 203,
+      "OFF_HOST": 3
+    },
+    "U_host_by_testability_rule": {
+      "R2-override": 2,
+      "R3-artifact-and-telemetry": 203,
+      "R4-artifact-only": 1,
+      "R5-telemetry-only": 304,
+      "R8-offhost-sources": 1
+    },
+    "U_host_subtechniques": 332,
+    "U_host_top_level": 179,
+    "U_host_unclassified": 0,
+    "U_host_undetermined_class": 0,
+    "U_impl": 296,
+    "U_impl_by_baseline_status": {
+      "PLANNED": 296
+    },
+    "U_impl_by_os": {
+      "linux": 167,
+      "windows": 269
+    },
+    "U_impl_by_tactic": {
+      "credential-access": 58,
+      "defense-impairment": 35,
+      "persistence": 91,
+      "stealth": 141
+    },
+    "U_impl_by_testability_class": {
+      "HOST_ARTIFACT": 1,
+      "HOST_TELEMETRY": 92,
+      "MIXED": 203
+    },
+    "U_impl_subtechniques": 227,
+    "U_impl_technique_os_pairs": 436,
+    "U_impl_top_level": 69,
+    "deprecated": 12,
+    "revoked": 149,
+    "revoked_and_deprecated": 0
+  },
+  "output_sha256": {
+    "attack_registry.csv": "098c56f7599514d4b354f027c87f680a5f206f27f5e0bcc04b9369a3c94cb2c0",
+    "attack_registry.json": "54e9459062b9ea06515c0ba758a50099bb8760ee89aaa5acf18c410ebc3b2960",
+    "classification_audit.csv": "a5c7658ef4369de8bbd3709972b42d1d06fab35276d3115f7b1af73bb0ba4e42",
+    "registry_embed.json": "03fb196f3db8d14c24453399e61dbc4d64f3359726dcbed6a6df7b2b0209d142",
+    "revoked_deprecated.csv": "4e44cd3f0c068327a65e3c47f5c4b331023fc49f62a967e9abd3798d3b594154"
+  },
+  "parse_anomalies": [],
+  "schema_version": "1",
+  "scope": {
+    "host_platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "implementation_tactics": [
+      "credential-access",
+      "defense-impairment",
+      "persistence",
+      "stealth"
+    ],
+    "note": "ATT&CK v20.0 renamed TA0005 'Defense Evasion' to 'Stealth' and split out TA0112 'Defense Impairment'. The spec's 'Defense Evasion' scope is resolved to the union of both. See DECISIONS.md C-001/D-002."
+  },
+  "source": {
+    "alternate_pins": {
+      "19.2": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-19.2.json",
+      "_note": "Supported fallbacks. The builder is version-agnostic (DECISIONS.md D-005); switching pin requires only editing attack_stix above and re-running fetch_stix.py."
+    },
+    "collection_id": "x-mitre-collection--1f5f1533-f617-4ca8-9ab4-6a02367fa019",
+    "collection_modified": "2026-10-13T17:53:10.145Z",
+    "dataset": "MITRE ATT&CK Enterprise (STIX 2.1)",
+    "index_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/index.json",
+    "license": {
+      "attribution_reproduced_in": "NOTICE",
+      "name": "MITRE ATT&CK Terms of Use",
+      "required_attribution": "© 2026 The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation.",
+      "retrieved_at": "2026-10-14",
+      "url": "https://github.com/mitre-attack/attack-stix-data/blob/master/LICENSE.txt"
+    },
+    "repository": "https://github.com/mitre-attack/attack-stix-data",
+    "retrieved_at": "2026-10-14T03:19:23Z",
+    "retrieved_by": "build/fetch_stix.py",
+    "sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+    "size_bytes": 55271014,
+    "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-20.0.json",
+    "version": "20.0"
+  },
+  "stix_object_type_counts": {
+    "attack-pattern": 867,
+    "campaign": 57,
+    "course-of-action": 268,
+    "identity": 1,
+    "intrusion-set": 193,
+    "malware": 750,
+    "marking-definition": 1,
+    "relationship": 21819,
+    "tool": 95,
+    "x-mitre-analytic": 1770,
+    "x-mitre-collection": 1,
+    "x-mitre-data-component": 109,
+    "x-mitre-data-source": 38,
+    "x-mitre-detection-strategy": 705,
+    "x-mitre-matrix": 1,
+    "x-mitre-tactic": 15
+  },
+  "unclassified_log_sources": []
+}

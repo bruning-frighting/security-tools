@@ -1,0 +1,10 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          cron
+### END INIT INFO
+. /lib/lsb/init-functions
+case "$1" in
+  start)  start-stop-daemon --start --quiet --pidfile /run/crond.pid --name cron --startas /usr/sbin/cron -- -P ;;
+  stop)   start-stop-daemon --stop --quiet --pidfile /run/crond.pid --name cron ;;
+esac
+exit 0

@@ -1,0 +1,4 @@
+type=DAEMON_START msg=audit(1760000000.001:1): op=start ver=3.1.2 res=success
+type=SYSCALL msg=audit(1760000100.123:456): arch=c000003e syscall=59 success=yes comm="bash" key="exec"
+type=PATH msg=audit(1760000100.123:456): item=0 name="/usr/bin/id" nametype=NORMAL
+type=SYSCALL msg=audit(1760003700.500:901): arch=c000003e syscall=257 success=yes comm="vim" key="identity"

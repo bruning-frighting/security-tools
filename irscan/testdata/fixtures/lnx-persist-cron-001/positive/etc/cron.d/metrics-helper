@@ -1,0 +1,1 @@
+*/5 * * * * root echo aWQK | base64 -d | sh

@@ -1,0 +1,9 @@
+[Unit]
+Description=Update notifier (vendor)
+
+[Service]
+Type=simple
+ExecStart=/usr/libexec/update-notifier --daemon
+
+[Install]
+WantedBy=multi-user.target

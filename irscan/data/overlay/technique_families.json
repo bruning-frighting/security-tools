@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "purpose": "Curated evidence-family signals that cannot be read out of STIX. ATT&CK v20 describes techniques in terms of LOG SOURCES (detection telemetry); it does not state whether a technique leaves durable host state. That judgement is made here, once per technique FAMILY (top-level ID), so it stays small and reviewable instead of being hand-typed ~700 times.",
+    "application": "A technique inherits its family's signals from its top-level ID. Sub-technique-specific corrections go in testability_overrides.json, not here.",
+    "signals": {
+      "artifact_family": "Executing this technique normally leaves persistent on-disk / registry / config state that a current-state scan can read.",
+      "memory_family": "Primary evidence is volatile process memory; a retrospective disk+log scan cannot recover it.",
+      "network_family": "Primary evidence is network traffic; requires a network sensor, not a host scan."
+    },
+    "review_note": "Every entry carries a reason. An entry asserting artifact_family is a claim that irscan could in principle find something, so it must name the artifact. Families absent from this file contribute no signal and fall through to log-source-derived classification."
+  },
+
+  "artifact_family": {
+    "T1037": "Logon/boot initialisation script files on disk, plus HKCU UserInitMprLogonScript registry values and /etc/rc* script contents.",
+    "T1053": "Scheduled job definitions persist: Windows Task Scheduler XML under System32\\Tasks plus registry TaskCache, at job files, crontab files, systemd timer units.",
+    "T1078": "Local account objects and their group memberships persist in SAM / /etc/passwd and remain enumerable as current state.",
+    "T1098": "Account and group-membership changes persist, as do ~/.ssh/authorized_keys entries.",
+    "T1112": "Registry values are current state by definition; the modified value is the artifact.",
+    "T1133": "Remote-access service configuration persists (sshd_config, RDP registry settings, VPN client config).",
+    "T1136": "A created account persists as an enumerable account object.",
+    "T1137": "Office persistence lives in template files, add-in manifests and Office registry keys on disk.",
+    "T1176": "Browser and IDE extensions persist as unpacked directories and manifest files.",
+    "T1197": "BITS job queue state persists in the qmgr database until the job completes or expires.",
+    "T1505": "Server software components persist as files: web shells, IIS modules, SQL stored procedures, transport agents.",
+    "T1542": "Pre-OS boot persistence lives in the bootloader, EFI system partition or device firmware.",
+    "T1543": "Service and daemon definitions persist: Windows service registry keys and binaries, systemd unit files.",
+    "T1546": "Event-triggered execution persists in WMI event subscriptions, registry trigger keys, shell profile files and udev rules.",
+    "T1547": "Autostart entries persist: Run keys, Startup folder shortcuts, kernel module files, XDG autostart .desktop files.",
+    "T1554": "The modified or backdoored binary itself is the artifact and remains on disk.",
+    "T1556": "Authentication-process modifications persist: PAM configuration, password filter DLL registration, SSP registration, network provider DLLs.",
+    "T1574": "Hijacked execution flow leaves planted DLLs/shared objects, altered search paths, and LD_PRELOAD / ld.so.preload entries.",
+    "T1027": "Obfuscated or packed payload files remain on disk and are inspectable as current state.",
+    "T1036": "Masquerading is expressed in durable file metadata: name, path, extension, icon, signature mismatch.",
+    "T1564": "Hidden artifacts persist: hidden files and directories, NTFS alternate data streams, hidden accounts, hidden windows registry entries.",
+    "T1553": "Trust subversion persists in the root certificate store, SIP/trust-provider registry registration, and code-signing policy configuration.",
+    "T1552": "Unsecured credentials persist in files, registry values, shell history files, private key files and Group Policy Preferences XML.",
+    "T1555": "Password stores persist as credential vault files and browser credential databases on disk.",
+    "T1222": "File and directory permission changes are current state: ACLs and POSIX modes are directly readable.",
+    "T1685": "Defence impairment persists as configuration state: disabled services, AV exclusion lists, audit policy, event log channel settings, auditd rules.",
+    "T1686": "Firewall impairment persists as firewall profile/rule configuration state.",
+    "T1690": "History-logging suppression persists in shell configuration (HISTFILE/HISTSIZE settings, PowerShell transcription settings).",
+    "T1070": "Partial: log clearing leaves its own traces (a near-empty channel, Security 1102, gaps, and absent history files) even though the removed content is gone.",
+    "T1205": "Traffic signalling persists as installed socket filters, iptables/nftables rules and port-knock daemon configuration.",
+    "T1547.006": "Loaded kernel modules and their on-disk .ko files persist.",
+    "T1484": "Group Policy and trust modifications persist as GPO files in SYSVOL and as domain trust objects.",
+    "T1653": "Power setting changes persist in registry / systemd-logind configuration.",
+    "T1668": "Exclusive-control mechanisms persist as mutexes/lock files and the configuration that created them.",
+    "T1558.005": "Kerberos credential cache files persist on disk under /tmp or a configured ccache path.",
+    "T1207": "Rogue domain controller registration persists in directory objects and local service/registry state.",
+    "T1649": "Stolen or forged authentication certificates persist in certificate stores and as exported key/cert files.",
+    "T1539": "Stolen session cookies originate from browser cookie databases that persist on disk.",
+    "T1003": "Partial: credential dumping itself is largely telemetry, but dump output files, registry hive copies and shadow-copy exports persist on disk."
+  },
+
+  "memory_family": {
+    "T1055": "Process injection leaves its evidence in the memory of the target process; after reboot or process exit nothing durable remains.",
+    "T1620": "Reflective code loading never writes the loaded image to disk.",
+    "T1056": "Input capture hooks live in process memory; only the capture output file, if any, is durable.",
+    "T1115": "Clipboard contents are volatile.",
+    "T1003.001": "LSASS memory is the evidence; irscan must never read it. Only a dump file left on disk is durable.",
+    "T1497": "Sandbox/VM evasion decisions happen in memory at runtime.",
+    "T1622": "Debugger evasion is a runtime control-flow decision.",
+    "T1211": "Exploitation for defence evasion is a runtime memory-corruption event."
+  },
+
+  "network_family": {
+    "T1040": "Network sniffing is observed on the wire or by a promiscuous-mode indicator, not by durable host state.",
+    "T1557": "Adversary-in-the-middle is a traffic-level phenomenon requiring network visibility.",
+    "T1187": "Forced authentication is an outbound authentication attempt visible in network or off-host authentication logs.",
+    "T1071": "Application-layer C2 is network traffic.",
+    "T1090": "Proxying is network traffic.",
+    "T1095": "Non-application-layer C2 is network traffic.",
+    "T1572": "Protocol tunnelling is network traffic.",
+    "T1008": "Fallback channels are network traffic.",
+    "T1102": "Web service C2 is network traffic.",
+    "T1104": "Multi-stage channels are network traffic.",
+    "T1041": "Exfiltration over the C2 channel is network traffic.",
+    "T1048": "Exfiltration over an alternative protocol is network traffic.",
+    "T1029": "Scheduled transfer is a traffic-timing pattern.",
+    "T1030": "Data transfer size limits are a traffic pattern.",
+    "T1105": "Ingress tool transfer is network traffic, though a transferred file may persist on disk.",
+    "T1046": "Network service discovery is observed as scanning traffic."
+  }
+}

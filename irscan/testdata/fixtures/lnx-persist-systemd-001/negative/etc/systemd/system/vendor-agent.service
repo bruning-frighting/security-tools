@@ -1,0 +1,10 @@
+[Unit]
+Description=Vendor monitoring agent
+
+[Service]
+ExecStart=/opt/vendor/bin/agent --config /etc/vendor/agent.conf
+Restart=always
+User=vendor
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+{
+  "home/alice/.ssh/authorized_keys": "0o600",
+  "root/.ssh/authorized_keys": "0o666",
+  "var/lib/backup-svc/.ssh/authorized_keys": "0o600"
+}

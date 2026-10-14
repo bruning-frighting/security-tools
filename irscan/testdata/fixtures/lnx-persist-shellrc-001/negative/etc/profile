@@ -1,0 +1,22 @@
+# /etc/profile: system-wide .profile file for the Bourne shell
+if [ "$(id -u)" -eq 0 ]; then
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+else
+  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+fi
+export PATH
+
+if [ "${PS1-}" ]; then
+  if [ "${BASH-}" ] && [ "$BASH" != "/bin/sh" ]; then
+    if [ -f /etc/bash.bashrc ]; then
+      . /etc/bash.bashrc
+    fi
+  fi
+fi
+
+for i in /etc/profile.d/*.sh; do
+  if [ -r $i ]; then
+    . $i
+  fi
+done
+unset i
